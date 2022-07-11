@@ -25,10 +25,9 @@
     </dependency>
    
      <dependency>
-        <groupId>javax.servlet</groupId>
-        <artifactId>javax.servlet-api</artifactId>
-        <version>3.0.1</version>
-        <scope>provided</scope>
+        <groupId>net.kut3.http</groupId>
+        <artifactId>servlet-util</artifactId>
+        <version>0.3.0</version>
      </dependency>
    
  </dependencies>
