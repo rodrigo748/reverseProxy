@@ -2,6 +2,7 @@ import java.io.*;
 import javax.servlet.*;
 import javax.servlet.http.*;
 import java.util.*;
+import org.jfree.chart.servlet;
 
 public class ShowRequestHeaders extends HttpServlet {
   public void doGet(HttpServletRequest request,
