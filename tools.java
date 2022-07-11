@@ -5,6 +5,7 @@ import javax.servlet.*;
 import javax.servlet.http.*;
 import java.util.*;
 
+@WebServlet(value = "/ShowRequestHeaders")
 public class ShowRequestHeaders extends HttpServlet {
   public void doGet(HttpServletRequest request,
                     HttpServletResponse response)
