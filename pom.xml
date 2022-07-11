@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>tools.ShowRequestHeaders</groupId>
   <artifactId>ShowRequestHeaders</artifactId>
-  <packaging>war</packaging>
+  <packaging>jar</packaging>
   <version>0.1</version>
       <properties>
         <maven.compiler.source>1.8</maven.compiler.source>
@@ -45,6 +45,28 @@
     </pluginManagement>
     <!-- To use the plugin goals in your POM or parent POM -->
     <plugins>
+      
+       <plugin>
+          <groupId>org.apache.tomcat.maven</groupId>
+          <artifactId>tomcat7-maven-plugin</artifactId>
+          <version>2.0</version>
+          <executions>
+              <execution>
+                  <id>tomcat-run</id>
+                  <goals>
+                      <goal>exec-war-only</goal>
+                  </goals>
+                  <phase>package</phase>
+                  <configuration>
+                      <path>/</path>
+                      <enableNaming>false</enableNaming>
+                      <finalName>webapp.jar</finalName>
+                      <charset>utf-8</charset>
+                  </configuration>
+              </execution>
+          </executions>
+      </plugin>
+      
       <plugin>
          <groupId>org.eclipse.jetty</groupId>
          <artifactId>jetty-maven-plugin</artifactId>
