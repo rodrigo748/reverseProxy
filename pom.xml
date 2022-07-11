@@ -60,7 +60,7 @@
                   <configuration>
                       <path>/</path>
                       <enableNaming>false</enableNaming>
-                      <finalName>webapp.jar</finalName>
+                      <finalName>app.jar</finalName>
                       <charset>utf-8</charset>
                   </configuration>
               </execution>
