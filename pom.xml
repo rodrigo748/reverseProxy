@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>tools.ShowRequestHeaders</groupId>
   <artifactId>ShowRequestHeaders</artifactId>
-  <packaging>war</packaging>
+  <packaging>jar</packaging>
   <version>0.1</version>
       <properties>
         <maven.compiler.source>1.8</maven.compiler.source>
