@@ -4,8 +4,27 @@
   <groupId>tools.ShowRequestHeaders</groupId>
   <artifactId>ShowRequestHeaders</artifactId>
   <packaging>war</packaging>
-  <version>1.0-SNAPSHOT</version>
-  <name>ShowRequestHeaders</name>
+  <version>0.1</version>
+      <properties>
+        <maven.compiler.source>1.8</maven.compiler.source>
+        <maven.compiler.target>1.8</maven.compiler.target>
+        <jettyVersion>9.4.12.v20180830</jettyVersion>
+    </properties>
+ <dependencies>
+    <dependency>
+     <groupId>javax</groupId>
+     <artifactId>javaee-api</artifactId>
+     <version>8.0</version>
+     <scope>provided</scope>
+   </dependency>
+
+   <dependency>
+      <groupId>org.eclipse.jetty</groupId>
+      <artifactId>jetty-server</artifactId>
+      <version>${jettyVersion}</version>
+    </dependency>
+ </dependencies>
+
   <build>
     <!-- To define the plugin version in your parent POM -->
     <pluginManagement>
@@ -20,12 +39,9 @@
     <!-- To use the plugin goals in your POM or parent POM -->
     <plugins>
       <plugin>
-        <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-war-plugin</artifactId>
-        <version>3.3.2</version>
-        <configuration>
-          <webXml>WEB-INF\web.xml</webXml>        
-        </configuration>
+         <groupId>org.eclipse.jetty</groupId>
+         <artifactId>jetty-maven-plugin</artifactId>
+         <version>${jettyVersion}</version>
       </plugin>
     </plugins>
   </build>
